@@ -1,15 +1,19 @@
 import { defineConfig } from 'vite';
 import shopify from 'vite-plugin-shopify';
+import importMaps from 'vite-plugin-shopify-import-maps';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [shopify({ snippetFile: 'vite.liquid' })],
+  plugins: [
+    shopify({ snippetFile: 'vite.liquid', versionNumbers: true }),
+    importMaps({ bareModules: true }),
+  ],
   build: {
     rollupOptions: {
       output: {
-        entryFileNames: '[name].[hash].min.js',
-        chunkFileNames: '[name].[hash].min.js',
-        assetFileNames: '[name].[hash].min[extname]',
+        entryFileNames: '[name].js',
+        chunkFileNames: '[name].js',
+        assetFileNames: '[name].[ext]',
       },
     },
   },
