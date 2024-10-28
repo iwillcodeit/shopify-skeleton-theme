@@ -9,6 +9,7 @@ export default defineConfig({
     importMaps({ bareModules: true }),
   ],
   build: {
+    minify: false,
     rollupOptions: {
       output: {
         entryFileNames: '[name].js',
