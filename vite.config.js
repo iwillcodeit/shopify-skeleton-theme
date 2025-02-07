@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig, defaultAllowedOrigins } from 'vite';
 import shopify from 'vite-plugin-shopify';
 import importMaps from 'vite-plugin-shopify-import-maps';
 import tailwindcss from '@tailwindcss/vite';
@@ -13,7 +13,7 @@ export default defineConfig({
   server: {
     cors: {
       origin: [
-        /^https?:\/\/(?:(?:[^:]+\.)?localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/,
+        defaultAllowedOrigins,
         'https://johns-apparel.myshopify.com', // Store URL
       ],
     },
