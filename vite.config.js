@@ -1,14 +1,12 @@
 import { defineConfig, defaultAllowedOrigins } from 'vite';
 import shopify from 'vite-plugin-shopify';
-import importMaps from 'vite-plugin-shopify-import-maps';
 import tailwindcss from '@tailwindcss/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    shopify({ snippetFile: 'vite.liquid', versionNumbers: true }),
+    shopify({ snippetFile: 'vite.liquid' }),
     tailwindcss(),
-    importMaps({ bareModules: true }),
   ],
   server: {
     cors: {
@@ -22,9 +20,9 @@ export default defineConfig({
     minify: false,
     rollupOptions: {
       output: {
-        entryFileNames: '[name].js',
-        chunkFileNames: '[name].js',
-        assetFileNames: '[name].[ext]',
+        entryFileNames: '[name].[hash].min.js',
+        chunkFileNames: '[name].[hash].min.js',
+        assetFileNames: '[name].[hash].min[extname]',
       },
     },
   },

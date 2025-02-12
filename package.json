@@ -34,7 +34,6 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4.0.4",
     "vite": "^6.1.0",
-    "vite-plugin-shopify": "^3.1.1",
-    "vite-plugin-shopify-import-maps": "^0.5.4"
+    "vite-plugin-shopify": "^3.1.1"
   }
 }
