@@ -4,10 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    shopify({ snippetFile: 'vite.liquid' }),
-    tailwindcss(),
-  ],
+  plugins: [shopify({ snippetFile: 'vite.liquid' }), tailwindcss()],
   server: {
     cors: {
       origin: [
