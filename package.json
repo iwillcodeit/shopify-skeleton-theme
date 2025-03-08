@@ -25,16 +25,16 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
-    "@shopify/prettier-plugin-liquid": "^1.8.2",
-    "@tailwindcss/vite": "^4.0.7",
+    "@shopify/prettier-plugin-liquid": "^1.9.0",
+    "@tailwindcss/vite": "^4.0.12",
     "concurrently": "^9.1.2",
     "eslint": "^9.22.0",
-    "eslint-config-prettier": "^10.0.1",
+    "eslint-config-prettier": "^10.1.1",
     "globals": "^16.0.0",
-    "prettier": "^3.5.1",
+    "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^4.0.7",
-    "vite": "^6.1.1",
+    "tailwindcss": "^4.0.12",
+    "vite": "^6.2.1",
     "vite-plugin-shopify": "^3.2.0"
   }
 }
